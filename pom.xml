@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.homw.framework.boot</groupId>
+  <artifactId>homw-framework-boot</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <issueManagement>
+      <system>github</system>
+      <url>https://github.com/homw188/homw-framework-boot/issues</url>
+  </issueManagement>
+  
+  <licenses>
+      <license>
+          <name>Apache License, Version 2.0</name>
+          <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+          <distribution>repo</distribution>
+      </license>
+  </licenses>
+  
+  <modules>
+    <module>micro-service</module>
+  </modules>
+
+  <properties>
+    <java.version>1.8</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    
+    <spring.boot.version>2.2.2.RELEASE</spring.boot.version>
+    
+	<mysql.version>8.0.19</mysql.version>
+	<druid.version>1.1.16</druid.version>
+	<mybatis.spring.boot.version>2.1.2</mybatis.spring.boot.version>
+	<druid.spring.boot.version>1.1.16</druid.spring.boot.version>
+	
+	<zookeeper.version>3.4.9</zookeeper.version>
+	
+	<jackson.version>2.10.2</jackson.version>
+	
+	<commons.logging.version>1.2</commons.logging.version>
+	<commons.lang3.version>3.9</commons.lang3.version>
+	<commons.io.version>2.6</commons.io.version>
+	<commons.codec.version>1.14</commons.codec.version>
+	<httpcomponents.version>4.5.11</httpcomponents.version>
+	
+	<slf4j.version>1.7.30</slf4j.version>
+	<log4j.version>1.2.17</log4j.version>
+	
+	<guava.version>28.2-jre</guava.version>
+	<springfox.swagger.version>2.9.2</springfox.swagger.version>
+	
+	<junit.version>4.13</junit.version>
+  </properties>
+  
+  <dependencyManagement>
+	<dependencies>
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+            <version>${spring.boot.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+        
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.mybatis.spring.boot</groupId>
+		    <artifactId>mybatis-spring-boot-starter</artifactId>
+		    <version>${mybatis.spring.boot.version}</version>
+		</dependency>
+		<dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+        <dependency>
+	        <groupId>com.alibaba</groupId>
+	        <artifactId>druid-spring-boot-starter</artifactId>
+	        <version>${druid.spring.boot.version}</version>
+	    </dependency>
+	    
+	    <dependency>
+	        <groupId>org.apache.zookeeper</groupId>
+	        <artifactId>zookeeper</artifactId>
+	        <version>${zookeeper.version}</version>
+	    </dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+		
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>${commons.logging.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons.lang3.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons.io.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>commons-codec</groupId>
+		    <artifactId>commons-codec</artifactId>
+		    <version>${commons.codec.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>${httpcomponents.version}</version>
+		</dependency>
+           <dependency>
+               <groupId>org.apache.httpcomponents</groupId>
+               <artifactId>httpcore</artifactId>
+               <version>4.4.13</version>
+           </dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>${httpcomponents.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-json-org</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-joda</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger2</artifactId>
+		    <version>${springfox.swagger.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger-ui</artifactId>
+		    <version>${springfox.swagger.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+  </dependencyManagement>
+  
+  <!-- 阿里云maven仓库 -->
+  <repositories>
+	<repository>
+		<id>public</id>
+		<name>aliyun nexus</name>
+		<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+		<releases>
+			<enabled>true</enabled>
+		</releases>
+	</repository>
+  </repositories>
+  
+  <pluginRepositories>
+	<pluginRepository>
+		<id>public</id>
+		<name>aliyun nexus</name>
+		<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+		<releases>
+			<enabled>true</enabled>
+		</releases>
+	</pluginRepository>
+  </pluginRepositories>
+  
+  <build>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.8.1</version>
+			<configuration>
+				<source>${java.version}</source>
+				<target>${java.version}</target>
+				<!-- true:跳过测试 -->
+				<skip>true</skip>
+                <showWarnings>true</showWarnings>
+				<showDeprecation>true</showDeprecation>
+				<encoding>${project.build.sourceEncoding}</encoding>
+			</configuration>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-resources-plugin</artifactId>
+			<version>3.0.2</version>
+			<configuration>
+				<encoding>${project.build.sourceEncoding}</encoding>
+			</configuration>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>3.1.0</version>
+            <configuration>
+				<encoding>${project.build.sourceEncoding}</encoding>
+			</configuration>
+            <executions>
+                <execution>
+                    <id>attach-sources</id>
+                    <goals>
+                        <goal>jar</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>3.1.1</version>
+            <configuration>
+                <charset>UTF-8</charset>
+                <additionalparam>-Xdoclint:none</additionalparam>
+            </configuration>
+            <executions>
+                <execution>
+                    <id>attach-javadocs</id>
+                    <goals>
+                        <goal>jar</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <fork>true</fork>
+                <addResources>true</addResources>
+            </configuration>
+        </plugin>
+	</plugins>
+  </build>
+</project>
