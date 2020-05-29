@@ -35,7 +35,7 @@
 	<mybatis.spring.boot.version>2.1.2</mybatis.spring.boot.version>
 	<druid.spring.boot.version>1.1.16</druid.spring.boot.version>
 	
-	<zookeeper.version>3.4.9</zookeeper.version>
+	<zookeeper.version>3.4.14</zookeeper.version>
 	
 	<jackson.version>2.10.2</jackson.version>
 	
