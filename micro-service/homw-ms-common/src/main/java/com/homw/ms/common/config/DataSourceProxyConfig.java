@@ -1,4 +1,4 @@
-package com.homw.ms.account.service.config;
+package com.homw.ms.common.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import io.seata.rm.datasource.DataSourceProxy;
@@ -25,7 +25,7 @@ public class DataSourceProxyConfig {
 	private String mapperLocations;
 
 	@Bean
-	@ConfigurationProperties(prefix = "spring.datasource")
+	@ConfigurationProperties("spring.datasource")
 	public DataSource druidDataSource() {
 		return new DruidDataSource();
 	}

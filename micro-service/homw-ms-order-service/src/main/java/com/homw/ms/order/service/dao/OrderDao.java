@@ -3,7 +3,7 @@ package com.homw.ms.order.service.dao;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import com.homw.ms.common.entity.Order;
+import com.homw.ms.common.api.entity.Order;
 
 @Mapper
 public interface OrderDao {

@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.homw.ms.common.api.entity.Account;
 import com.homw.ms.common.bean.CommonResult;
-import com.homw.ms.common.entity.Account;
 
-@FeignClient(name = "ms-account-service", path = "ms-account")
-public interface AccountService {
-	@PostMapping(value = "/account/decrease")
+@FeignClient(name = "ms-account-service", path = "ms-account/account")
+public interface AccountServiceApi {
+	@PostMapping(value = "/decrease")
 	CommonResult<?> decrease(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money);
 	
-	@PostMapping(value = "/account/create")
+	@PostMapping(value = "/create")
 	CommonResult<?> create(@RequestBody Account account);
 	
-	@GetMapping(value = "/account/get/{id}")
+	@GetMapping(value = "/get/{id}")
 	CommonResult<?> getAccountById(@PathVariable("id") Long id);
 }

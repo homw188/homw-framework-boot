@@ -21,6 +21,36 @@
         <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
     
+     <!-- jdbc -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot-starter</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid-spring-boot-starter</artifactId>
+    </dependency>
+    
+    <!--springcloud ailibaba seata -->
+    <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+        <exclusions>
+            <exclusion>
+                <artifactId>seata-all</artifactId>
+                <groupId>io.seata</groupId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    <dependency>
+        <groupId>io.seata</groupId>
+        <artifactId>seata-spring-boot-starter</artifactId>
+    </dependency>
+    
     <!--nacos注册中心-->
     <dependency>
         <groupId>com.alibaba.cloud</groupId>

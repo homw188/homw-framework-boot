@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import com.homw.ms.common.entity.Account;
+import com.homw.ms.common.api.entity.Account;
 
 @Mapper
 public interface AccountDao {

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.homw.ms.account.service.dao.AccountDao;
 import com.homw.ms.account.service.service.AccountService;
-import com.homw.ms.common.entity.Account;
+import com.homw.ms.common.api.entity.Account;
 
 @Service
 public class AccountServiceImpl implements AccountService {
@@ -25,11 +25,11 @@ public class AccountServiceImpl implements AccountService {
 		LOGGER.info("------->account-service中扣减账户余额开始");
 		// 模拟超时异常，全局事务回滚
 		// 暂停几秒钟线程
-		try {
+		/*try {
 			TimeUnit.SECONDS.sleep(20);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
-		}
+		}*/
 		accountDao.decrease(userId, money);
 		LOGGER.info("------->account-service中扣减账户余额结束");
 	}

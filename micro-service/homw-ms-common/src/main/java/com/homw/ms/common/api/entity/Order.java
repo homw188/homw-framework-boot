@@ -1,4 +1,4 @@
-package com.homw.ms.common.entity;
+package com.homw.ms.common.api.entity;
 
 import java.math.BigDecimal;
 

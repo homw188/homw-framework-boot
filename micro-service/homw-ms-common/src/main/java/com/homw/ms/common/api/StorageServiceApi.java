@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.homw.ms.common.bean.CommonResult;
 
-@FeignClient(name = "ms-storage-service", path = "ms-storage")
-public interface StorageService {
-	@PostMapping(value = "/storage/decrease")
+@FeignClient(name = "ms-storage-service", path = "ms-storage/storage")
+public interface StorageServiceApi {
+	@PostMapping(value = "/decrease")
 	CommonResult<?> decrease(@RequestParam("productId") Long productId, @RequestParam("count") Integer count);
 }
