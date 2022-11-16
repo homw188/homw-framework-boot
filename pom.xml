@@ -36,7 +36,7 @@
 	
 	<zookeeper.version>3.4.9</zookeeper.version>
 	
-	<jackson.version>2.10.2</jackson.version>
+	<jackson.version>2.12.7.1</jackson.version>
 	
 	<commons.logging.version>1.2</commons.logging.version>
 	<commons.lang3.version>3.9</commons.lang3.version>
